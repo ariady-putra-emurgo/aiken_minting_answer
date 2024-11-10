@@ -117,7 +117,7 @@ export default function Dashboard(props: {
           const mintedAssets = { [`${policyID}${fromText(assetName)}`]: 20n };
 
           const outputReference = [txHash, txIndex];
-          const isMinting = new Constr(1, []);
+          const isMinting = new Constr(1, []); // True
 
           const myRedeemer = new Constr(0, [outputReference, isMinting]);
           const redeemer = Data.to(myRedeemer);
@@ -153,13 +153,9 @@ export default function Dashboard(props: {
           const burnedAssets = { [assetUnit]: -20n };
 
           const utxos = await lucid.utxosAtWithUnit(address, assetUnit);
-          const utxo = utxos[0];
 
-          const txHash = String(utxo.txHash);
-          const txIndex = BigInt(utxo.outputIndex);
-
-          const outputReference = [txHash, txIndex];
-          const isMinting = new Constr(1, []);
+          const outputReference = ["", 0n];
+          const isMinting = new Constr(0, []); // False
 
           const myRedeemer = new Constr(0, [outputReference, isMinting]);
           const redeemer = Data.to(myRedeemer);
