@@ -1,16 +1,14 @@
 # aiken_minting_answer
 
-To run the offchain:
+This project answers the following validators:
 
-1. Create a `.env.local` file
-2. Run `pnpm dev`
+- `check_redeemer`
+- `check_redeemer_2`
+- `nft`
 
-Your `.env.local` file must contain:
+Install `pnpm` if you have not by running `npm i -g pnpm`, and then go to [`./offchain`](./offchain):
 
-```
-NEXT_PUBLIC_BF_URL=https://cardano-preprod.blockfrost.io/api/v0
-NEXT_PUBLIC_BF_PID=preprodYOUR_PREPROD_BLOCKFROST_PROJECT_ID
-NEXT_PUBLIC_CARDANO_NETWORK=Preprod
-```
+- Run `pnpm i` if you have never run the `offchain`.
+- Run `pnpm dev` to run the `offchain`.
 
-To install `pnpm` run `npm i -g pnpm`.
+Go to http://localhost:3000
